@@ -1,0 +1,12 @@
+{
+  "name": "ignite---desafio-01",
+  "version": "1.0.0",
+  "description": "Code for Ignite Challenge 01 - NodeJS",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
