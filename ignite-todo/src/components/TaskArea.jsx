@@ -12,32 +12,35 @@ const noTask = () => {
     )
 }
 
-export default function TaskArea() {
-  return (
-    <div className={styles.taskArea}>
-        <header>
-            <div>
-                <strong>Tarefas Criadas</strong>
-                <div className={styles.counter}>
-                    <strong>0</strong>
+export default function TaskArea({ tasks, completeTask, deleteTask }) {
+    return (
+        <div className={styles.taskArea}>
+            <header>
+                <div>
+                    <strong>Tarefas Criadas</strong>
+                    <div className={styles.counter}>
+                        <strong>{tasks.length}</strong>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <strong>Concluídas</strong>
-                <div className={styles.counter}>
-                    <strong >2 de 5</strong>
+                <div>
+                    <strong>Concluídas</strong>
+                    <div className={styles.counter}>
+                        <strong>{tasks.filter(task => task.completed).length + " de " + tasks.length}</strong>
+                    </div>
                 </div>
-            </div>
-        </header>
-
-        
-            <Task id = {1} />
-            <Task id = {2} />
-            <Task id = {3} />
-        
-        
-      
-        
-    </div>
-  )
+            </header>
+            {
+                tasks.length === 0 ? noTask() : tasks.map(task => (
+                    <Task 
+                        key = {task.id}
+                        id = {task.id}
+                        content = {task.content}
+                        completed = {task.completed}
+                        completeTask = {completeTask}
+                        deleteTask = {deleteTask}
+                    />
+                ))
+            }
+        </div>
+    )
 }
