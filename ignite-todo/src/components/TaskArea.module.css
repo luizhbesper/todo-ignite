@@ -1,0 +1,55 @@
+.taskArea {
+    margin-top: 4rem;
+}
+
+.noTask {
+    color: #3D3D3D;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.noTask svg{
+    margin-top: 1rem;
+}
+
+.noTask p {
+    color: var(--gray-300);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.taskArea header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--blue);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.taskArea header :last-child {
+    color: var(--purple);
+}
+
+.taskArea header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.counter {
+    color: var(--gray-100);
+    font-size: 0.75rem;
+    border-radius: 999px;
+    background-color: var(--gray-400);
+    padding: 0.125rem 0.5rem;
+    margin-left: 0.5rem;
+
+}
+
+.counter strong {
+    color: var(--gray-100) !important
+}
